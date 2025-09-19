@@ -35,7 +35,16 @@ print("Država z največ mejami:", oldi, old)
         
 # 2: Poišči države kjer govorijo največ jezikov (languages)
 # Namig: Nekatere države nimajo ključa "languages"
+old=0
+oldi=""
+for i in drzave:
+    if "languages" in i:
+        a = len(i["languages"])
+        if a > old:
+            old = a
+            oldi = i["name"]
 
+print("Države z največ jeziki:", oldi, old)
 # 3: Izračunaj povprečno število prebivalcev (population) po celinah (continents)
 # Namig: Vedno preveri, če je population večji od 0
 
